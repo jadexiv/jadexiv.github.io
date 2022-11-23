@@ -36,6 +36,7 @@ body {
 .nav-grid a:hover {
     color: #222;
     background-color: #ddd;
+    border-radius: 4px;
 }
 
 .nav-current {

@@ -84,6 +84,7 @@ function setDiscord(discord) {
     document.getElementById("discord-dropdown").innerHTML = discords.get(discord);
     setActiveItem(discords, "discord", discord);
     displayElements("discord", discord);
+    updatePartyfinderDescription();
 
     if (discord == "ea" && settings.party.startsWith("lfg")) {
         setParty("ea-magia1");
@@ -101,6 +102,7 @@ function setRunType(runType) {
     document.getElementById("runtype-dropdown").innerHTML = runTypes.get(runType);
     setActiveItem(runTypes, "runtype", runType);
     displayElements("runtype", runType);
+    updatePartyfinderDescription();
 }
 
 function setParty(party) {
@@ -161,6 +163,16 @@ function hideElements(category, target) {
     Array.prototype.forEach.call(targetElements, function(element) {
         element.classList.add("d-none");
     });
+}
+
+function updatePartyfinderDescription() {
+    if (settings.discord == "ea") {
+        document.getElementById("partyfinder").innerHTML = `${parties.get(settings.party)} | BA ${runTypes.get(settings.runType)} Run - Eurekan Academy | https://discord.gg/eurekanacademy`;
+    }
+    else if (settings.discord == "lfg") {
+        document.getElementById("partyfinder").innerHTML = `${parties.get(settings.party)} - Light Forays - ${runTypes.get(settings.runType)} Run - Voice chat and future signups: http://discord.gg/LightForays`;
+    }
+    
 }
 
 document.getElementById("discord-item-ea").onclick = function() { setDiscord("ea") }
