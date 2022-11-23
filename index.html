@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>BA Leader Guide</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="body-grid">
+            <div class="grid-child">
+                <div class="nav-grid">
+                    <span class="nav-header">Settings</span>
+                    <span id="discord-setting-display" class="nav-content"></span>
+                    <span id="runtype-setting-display" class="nav-content"></span>
+                    <span id="party-setting-display" class="nav-content"></span>
+                    <span id="role-setting-display" class="nav-content mb-2"></span>
+                    <span class="nav-header mb-2">Pages</span>
+                    <a id="setup-link">Setup</a>
+                    <a id="kugane-link">Kugane</a>
+                    <a id="hydatos-link" class="hide-party hide-party-ea-support hide-party-lfg-support d-none">Hydatos</a>
+                    <a id="lobby-link" class="hide-party hide-party-ea-support hide-party-lfg-support d-none">Lobby</a>
+                    <a id="owain-link" class="show-party show-party-ea-magia1 show-party-ea-magia2 show-party-ea-magia3 show-party-lfg-party4 show-party-lfg-party5 show-party-lfg-party6 d-none">Owain</a>
+                    <a id="art-link" class="show-party show-party-ea-logos1 show-party-ea-logos2 show-party-ea-logos3 show-party-lfg-party1 show-party-lfg-party2 show-party-lfg-party3 d-none">Art</a>
+                    <a id="raiden-link" class="hide-party hide-party-ea-support hide-party-lfg-support d-none">Raiden</a>
+                    <a id="rooms-link" class="hide-party hide-party-ea-support hide-party-lfg-support d-none">Rooms</a>
+                    <a id="support-link" class="show-party show-party-ea-support show-party-lfg-support d-none">Support</a>
+                    <a id="av-link">AV</a>
+                    <a id="ozma-link">Ozma</a>
+                </div>
+            </div>
+            <div class="grid-child">
+                <div id="setup-body" class="d-none">
+                    <h1>Setup</h1>
+                    <label class="form-label">Discord</label>
+                    <div class="dropdown mb-2">
+                        <button id="discord-dropdown" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a id="discord-item-ea" class="dropdown-item" href="#">Eurekan Academy</a></li>
+                            <li><a id="discord-item-lfg" class="dropdown-item" href="#">Light Forays Group</a></li>
+                        </ul>
+                    </div>
+                    <label class="form-label">Run Type</label>
+                    <div class="dropdown mb-2">
+                        <button id="runtype-dropdown" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a id="runtype-item-newbie" class="dropdown-item" href="#">Newbie</a></li>
+                            <li><a id="runtype-item-flex" class="dropdown-item" href="#">Flex</a></li>
+                            <li><a id="runtype-item-reclear" class="dropdown-item" href="#">Reclear</a></li>
+                            <li><a id="runtype-item-reflex" class="dropdown-item" href="#">Reflex</a></li>
+                            <li><a id="runtype-item-impromptu" class="dropdown-item" href="#">Impromptu</a></li>
+                            <li><a id="runtype-item-other" class="dropdown-item" href="#">Other</a></li>
+                        </ul>
+                    </div>
+                    <div class="show-discord show-discord-ea d-none">
+                        <label class="form-label">Party</label>
+                        <div class="dropdown mb-2">
+                            <button id="ea-party-dropdown" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li><a id="party-item-ea-magia1" class="dropdown-item" href="#">Magia 1</a></li>
+                                <li><a id="party-item-ea-magia2" class="dropdown-item" href="#">Magia 2</a></li>
+                                <li><a id="party-item-ea-magia3" class="dropdown-item" href="#">Magia 3</a></li>
+                                <li><a id="party-item-ea-logos1" class="dropdown-item" href="#">Logos 1</a></li>
+                                <li><a id="party-item-ea-logos2" class="dropdown-item" href="#">Logos 2</a></li>
+                                <li><a id="party-item-ea-logos3" class="dropdown-item" href="#">Logos 3</a></li>
+                                <li><a id="party-item-ea-support" class="dropdown-item" href="#">Support</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="show-discord show-discord-lfg d-none">
+                        <label class="form-label">Party</label>
+                        <div class="dropdown mb-2">
+                            <button id="lfg-party-dropdown" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li><a id="party-item-lfg-party1" class="dropdown-item" href="#">Party 1</a></li>
+                                <li><a id="party-item-lfg-party2" class="dropdown-item" href="#">Party 2</a></li>
+                                <li><a id="party-item-lfg-party3" class="dropdown-item" href="#">Party 3</a></li>
+                                <li><a id="party-item-lfg-party4" class="dropdown-item" href="#">Party 4</a></li>
+                                <li><a id="party-item-lfg-party5" class="dropdown-item" href="#">Party 5</a></li>
+                                <li><a id="party-item-lfg-party6" class="dropdown-item" href="#">Party 6</a></li>
+                                <li><a id="party-item-lfg-support" class="dropdown-item" href="#">Support</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <label class="form-label">Role</label>
+                    <div class="dropdown mb-2">
+                        <button id="role-dropdown" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a id="role-item-partyleader" class="dropdown-item" href="#">Party Leader</a></li>
+                            <li><a id="role-item-splithost" class="dropdown-item" href="#">Split Host</a></li>
+                            <li><a id="role-item-host" class="dropdown-item" href="#">Host</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="kugane-body" class="d-none">
+                    <h1>Kugane</h1>
+                    <ul>
+                        <li><code>WIP</code></li>
+                    </ul>
+                </div>
+                <div id="hydatos-body" class="d-none">
+                    <h1>Hydatos</h1>
+                    <ul>
+                        <li class="hide-runtype hide-runtype-reclear hide-runtype-reflex"><code class="copy-text">/p nice message</code></li>
+                        <li><code>WIP</code></li>
+                    </ul>
+                </div>
+                <div id="lobby-body" class="d-none">
+                    <h1>Lobby</h1>
+                    <ul>
+                        <li class="show-party show-party-ea-magia1 show-party-ea-magia2 show-party-ea-magia3 show-party-lfg-party4 show-party-lfg-party5 show-party-lfg-party6 d-none">
+                            Place a marker on the Magia Manipulator side.
+                        </li>
+                        <li class="show-party show-party-ea-logos1 show-party-ea-logos2 show-party-ea-logos3 show-party-lfg-party1 show-party-lfg-party2 show-party-lfg-party3 d-none">
+                            Place a marker on the Logos Manipulator side.
+                        </li>
+                        <li><code>WIP</code></li>
+                    </ul>
+                </div>
+                <div id="owain-body" class="d-none">
+                    <h1>Owain</h1>
+                    <ul>
+                        <li><code>WIP</code></li>
+                    </ul>
+                    <div class="show-role show-role-splithost show-role-host">
+                        <h2>Explanations</h2>
+                        <ul>
+                            <li><code>WIP</code></li>
+                        </ul>
+                    </div>
+                    <h2>Timeline</h2>
+                    <ul>
+                        <li><code>WIP</code></li>
+                    </ul>
+                </div>
+                <div id="art-body" class="d-none">
+                    <h1>Art</h1>
+                    <ul>
+                        <li><code>WIP</code></li>
+                    </ul>
+                    <div class="show-role show-role-splithost show-role-host">
+                        <h2>Explanations</h2>
+                        <ul>
+                            <li><code>WIP</code></li>
+                        </ul>
+                    </div>
+                    <h2>Timeline</h2>
+                    <ul>
+                        <li><code>WIP</code></li>
+                    </ul>
+                </div>
+                <div id="raiden-body" class="d-none">
+                    <h1>Raiden</h1>
+                    <ul>
+                        <li><code>WIP</code></li>
+                    </ul>
+                    <div class="show-role show-role-host">
+                        <h2>Explanations</h2>
+                        <ul>
+                            <li><code>WIP</code></li>
+                        </ul>
+                    </div>
+                    <h2>Timeline</h2>
+                    <ul>
+                        <li><code>WIP</code></li>
+                    </ul>
+                </div>
+                <div id="rooms-body" class="d-none">
+                    <h1>Rooms</h1>
+                    <ul>
+                        <div class="show-party show-party-ea-magia1 show-party-lfg-party1">
+                            <li>Mark the first room on the left (Earth)</li>
+                            <li><code class="copy-text">/p defensive is earth, offensive is water</code></li>
+                        </div>
+                        <div class="show-party show-party-ea-magia2 show-party-lfg-party2">
+                            <li>Mark the second room on the left (Lightning)</li>
+                            <li><code class="copy-text">/p defensive is lightning, offensive is earth</code></li>
+                        </div>
+                        <div class="show-party show-party-ea-magia3 show-party-lfg-party3">
+                            <li>Mark the third room on the left (Water)</li>
+                            <li><code class="copy-text">/p defensive is water, offensive is lightning</code></li>
+                        </div>
+                        <div class="show-party show-party-ea-logos1 show-party-lfg-party4">
+                            <li>Mark the first room on the right (Fire)</li>
+                            <li><code class="copy-text">/p defensive is fire, offensive is wind, mobs do a donut attack (go close or very far)</code></li>
+                        </div>
+                        <div class="show-party show-party-ea-logos2 show-party-lfg-party5">
+                            <li>Mark the second room on the right (Wind)</li>
+                            <li><code class="copy-text">/p defensive is wind, offensive is ice</code></li>
+                        </div>
+                        <div class="show-party show-party-ea-logos3 show-party-lfg-party6">
+                            <li>Mark the third room on the right (Ice)</li>
+                            <li><code class="copy-text">/p defensive is ice, offensive is fire, mobs do a cone attack (easier to dodge when close)</code></li>
+                        </div>
+                        <li><code>WIP</code></li>
+                    </ul>
+                </div>
+                <div id="support-body" class="d-none">
+                    <h1>Support</h1>
+                    <ul>
+                        <li><code>WIP</code></li>
+                    </ul>
+                    <pre>
+attack
+hmm
+                    </pre>
+                </div>
+                <div id="av-body" class="d-none">
+                    <h1>AV</h1>
+                    <ul>
+                        <li><code>WIP</code></li>
+                    </ul>
+                    <div class="show-role show-role-host">
+                        <h2>Explanations</h2>
+                        <ul>
+                            <li><code>WIP</code></li>
+                        </ul>
+                    </div>
+                    <h2>Timeline</h2>
+                    <ul>
+                        <li><code>WIP</code></li>
+                    </ul>
+                </div>
+                <div id="ozma-body" class="d-none">
+                    <h1>Ozma</h1>
+                    <ul>
+                        <li class="show-party show-party-ea-magia1"><code class="copy-text">/p we are on platform 1, we go to the blackhole buffer on platform 1, we place meteors on 1 and A</code></li>
+                        <li class="show-party show-party-ea-magia2"><code class="copy-text">/p we are on platform 2, we go to the blackhole buffer on platform 2, we place meteors on 1 and B</code></li>
+                        <li class="show-party show-party-ea-magia3"><code class="copy-text">/p we are on platform 3, we go to the blackhole buffer on platform 3, we place meteors on 1 and C</code></li>
+                        <li class="show-party show-party-ea-logos1"><code class="copy-text">/p we are on platform 1, we go to the blackhole buffer on A, we place meteors on 1 and A</code></li>
+                        <li class="show-party show-party-ea-logos2"><code class="copy-text">/p we are on platform 2, we go to the blackhole buffer on B, we place meteors on 1 and B</code></li>
+                        <li class="show-party show-party-ea-logos3"><code class="copy-text">/p we are on platform 3, we go to the blackhole buffer on C, we place meteors on 1 and C</code></li>
+                        <li class="show-party show-party-lfg-party1"><code class="copy-text">/p we are on platform A, we go to the blackhole buffer on A, we place meteors on 1 and 2</code></li>
+                        <li class="show-party show-party-lfg-party2"><code class="copy-text">/p we are on platform A, we go to the blackhole buffer on 2, we place meteors on 1 and 2</code></li>
+                        <li class="show-party show-party-lfg-party3"><code class="copy-text">/p we are on platform B, we go to the blackhole buffer on B, we place meteors on 1 and 2</code></li>
+                        <li class="show-party show-party-lfg-party4"><code class="copy-text">/p we are on platform B, we go to the blackhole buffer on 2, we place meteors on 1 and 2</code></li>
+                        <li class="show-party show-party-lfg-party5"><code class="copy-text">/p we are on platform C, we go to the blackhole buffer on C, we place meteors on 1 and 2</code></li>
+                        <li class="show-party show-party-lfg-party6"><code class="copy-text">/p we are on platform C, we go to the blackhole buffer on 2, we place meteors on 1 and 2</code></li>
+                        <li class="show-party show-party-ea-support show-party-lfg-support"><span>Ask the host where support goes</span></li>
+                        <li class="show-party show-party-ea-support show-party-lfg-support"><code class="copy-text">/p we are on platform #, we go to the blackhole buffer on #</code></li>
+                        <li><code>WIP</code></li>
+                    </ul>
+                    <div class="show-role show-role-host">
+                        <h2>Explanations</h2>
+                        <ul>
+                            <li><code>WIP</code></li>
+                        </ul>
+                    </div>
+                    <h2>Timeline</h2>
+                    <ul>
+                        <li><code>WIP</code></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <script src="index.js"></script>
+    </body>
+</html>

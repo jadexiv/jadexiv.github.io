@@ -1,0 +1,80 @@
+body {
+    background-color:#222;
+    color:#fff;
+    padding: 64px;
+}
+
+.body-grid {
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+.nav-grid {
+    display: grid;
+    grid-template-rows: auto;
+    margin-right: 64px;
+}
+
+.nav-grid li::marker {
+    content: '';
+}
+
+.nav-grid ul {
+    padding: 0;
+}
+
+.nav-grid a {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #ddd;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 2px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.nav-grid a:hover {
+    color: #222;
+    background-color: #ddd;
+}
+
+.nav-current {
+    color: #fff;
+    background-color: #444;
+    border-radius: 4px;
+}
+
+.nav-header {
+    text-transform: uppercase;
+    color: #888;
+    font-weight: 500;
+    font-size: small;
+}
+
+.nav-content {
+    text-transform: uppercase;
+    color: #ddd;
+    font-weight: 500;
+    font-size: small;
+}
+
+.dropdown-toggle {
+    background-color: #222;
+}
+
+.form-label {
+    text-transform: uppercase;
+    color: #ddd;
+    font-weight: 500;
+    font-size: small;
+}
+
+pre {
+    background-color: black;
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #444;
+    padding: 4px;
+    width: 512px;
+}
