@@ -113,6 +113,7 @@ function setParty(party) {
     document.getElementById("lfg-party-dropdown").innerHTML = parties.get(party);
     setActiveItem(parties, "party", party);
     displayElements("party", party);
+    updatePartyfinderDescription();
 }
 
 function setRole(role) {
