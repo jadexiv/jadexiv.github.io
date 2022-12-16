@@ -170,9 +170,12 @@ function updatePartyfinderDescription() {
         document.getElementById("partyfinder").innerHTML = `${parties.get(settings.party)} | BA ${runTypes.get(settings.runType)} Run - Eurekan Academy | https://discord.gg/eurekanacademy`;
     }
     else if (settings.discord == "lfg") {
-        document.getElementById("partyfinder").innerHTML = `${parties.get(settings.party)} - Light Forays - ${runTypes.get(settings.runType)} Run - Voice chat and future signups: http://discord.gg/LightForays`;
+        if (settings.runType == "impromptu") {
+            document.getElementById("partyfinder").innerHTML = `${parties.get(settings.party)} - Light Forays - ${runTypes.get(settings.runType)} Run - Passcodes in #ba-rosters: http://discord.gg/LightForays`;
+        } else {
+            document.getElementById("partyfinder").innerHTML = `${parties.get(settings.party)} - Light Forays - ${runTypes.get(settings.runType)} Run - Voice chat and future signups: http://discord.gg/LightForays`;
+        }
     }
-    
 }
 
 document.getElementById("discord-item-ea").onclick = function() { setDiscord("ea") }
