@@ -79,3 +79,11 @@ pre {
     padding: 4px;
     width: 512px;
 }
+
+.code-red {
+    color: red;
+}
+
+.code-blue {
+    color: #4af;
+}
