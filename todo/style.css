@@ -1,0 +1,307 @@
+body {
+    background-color:#222;
+    color:#fff;
+    padding: 64px;
+}
+
+.todo-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.todo-header h1 {
+    font-size: 28px;
+}
+
+.todo-top-buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: stretch;
+}
+
+.todo-add-button {
+    color: #fff;
+    display: inline-block;
+    height: 28px;
+    margin-top: 4px;
+    background-color: #358;
+    border-radius: 4px;
+    border-color: #47a;
+    border-width: 1px;
+    border-style: solid;
+    font-size: small;
+    margin-left: 4px;
+}
+
+.todo-export-button {
+    color: #fff;
+    display: inline-block;
+    height: 28px;
+    margin-top: 4px;
+    background-color: #649;
+    border-radius: 4px;
+    border-color: #85b;
+    border-width: 1px;
+    border-style: solid;
+    font-size: small;
+    margin-left: 4px;
+}
+
+.todo-import-button {
+    color: #fff;
+    display: inline-block;
+    height: 28px;
+    margin-top: 4px;
+    background-color: #974;
+    border-radius: 4px;
+    border-color: #b96;
+    border-width: 1px;
+    border-style: solid;
+    font-size: small;
+}
+
+.todo-go-button {
+    color: #fff;
+    display: inline-block;
+    height: 28px;
+    margin-top: 4px;
+    background-color: #444;
+    border-radius: 4px;
+    border-color: #b96;
+    border-width: 1px;
+    border-style: solid;
+    font-size: small;
+    width: 100px;
+}
+
+.todo-item {
+    display: grid;
+    grid-template-columns: 1fr auto auto auto;
+    background-color: #444;
+    border-radius: 4px;
+    border-color: #555;
+    border-width: 1px;
+    border-style: solid;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-bottom: 4px;
+}
+
+.todo-item-completed {
+    background-color: #565;
+    border-color: #797;
+}
+
+.todo-primary {
+    grid-template-columns: auto auto;
+}
+
+.todo-name {
+    padding-top: 1px;
+}
+
+.todo-time {
+    padding-top: 3px;
+    padding-right: 8px;
+    font-size: small;
+    color: #ddd;
+}
+
+.todo-completed {
+    padding-top: 2px;
+    padding-right: 2px;
+}
+
+.todo-edit-button {
+    display: inline-block;
+    color: #ddd;
+    cursor: pointer;
+}
+
+.todo-save-button {
+    display: inline-block;
+    color: #ddd;
+    padding-left: 1px;
+    cursor: pointer;
+}
+
+.todo-delete-button {
+    display: inline-block;
+    color: #ddd;
+    padding-left: 1px;
+    cursor: pointer;
+}
+
+.todo-edit-button:hover {
+    color:#fff;
+}
+
+.todo-edit {
+    padding-top: 1px;
+    grid-template-columns: auto auto auto auto auto;
+}
+
+.todo-edit-input {
+    display: inline;
+}
+
+.todo-edit-input input {
+    height: 24px;
+    width: 200px;
+    font-size: small;
+    background-color: #333;
+    color: #fff;
+    border-radius: 2px;
+    border-color: #555;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.todo-edit-input-time input {
+    width: 60px;
+}
+
+.todo-edit-select {
+    display: inline;
+}
+
+.todo-mr-n1 {
+    margin-right: -1px;
+}
+
+.todo-mr-0 {
+    margin-right: 0px;
+}
+
+.todo-edit-select select {
+    height: 24px;
+    width: 100px; 
+    font-size: small;
+    background-color: #333;
+    color: #fff;
+    border-radius: 2px;
+    border-color: #555;
+}
+
+.form-check-input {
+    background-color: #333;
+    border-color: #666;
+}
+
+.form-check-input:focus {
+    box-shadow: none;
+    border-color: #666;
+}
+
+.form-check-input:checked {
+    background-color: #333;
+    border-color: #797;
+}
+
+.form-switch .form-check-input {
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='white'/%3e%3c/svg%3e");
+}
+
+.form-switch .form-check-input:focus {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='white'/%3e%3c/svg%3e");
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #aaa;
+    opacity: 1; /* Firefox */
+    padding-left: 2px;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #aaa;
+}
+  
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: #aaa;
+}
+
+.export-panel {
+    padding: 8px;
+    background-color: #649;
+    border-radius: 4px;
+    border-color: #85b;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.export-panel input {
+    background-color: #333;
+    border-color: #85b;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 4px;
+    width: 100%;
+    color: #eee;
+    font-size: smaller;
+}
+
+.export-panel p {
+    font-size: smaller;
+    margin-top: 0px;
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-bottom: 2px;
+    color: #eee;
+}
+
+.import-panel {
+    padding: 8px;
+    background-color: #974;
+    border-radius: 4px;
+    border-color: #b96;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.import-panel input {
+    background-color: #333;
+    border-color: #b96;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 4px;
+    width: 100%;
+    color: #eee;
+    font-size: smaller;
+}
+
+.import-panel p {
+    font-size: smaller;
+    margin-top: 0px;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-bottom: 2px;
+    color: #eee;
+}
+
+.error-panel {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    background-color: #944;
+    border-radius: 4px;
+    border-color: #d99;
+    border-width: 1px;
+    border-style: solid;
+    min-height: 28px;
+}
+
+.error-panel p {
+    font-size: smaller;
+    margin-top: 2px;
+    margin-left: 8px;
+    margin-right: 4px;
+    margin-bottom: 2px;
+    color: #eee;
+}
+
+.error-panel i {
+    margin-top: 5px;
+    margin-right: 9px;
+    cursor: pointer;
+    color: #eee;
+}
