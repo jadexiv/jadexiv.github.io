@@ -63,11 +63,11 @@ if (localStorage["todoItems"] != null) {
 		{
 			"id": 1,
 			"name": "Frontlines",
-			"completedDate": "2022-12-21T08:00:00+00:00",
+			"completedDate": null,
 			"routine": {
 				"type": "daily",
 				"hour": 16,
-				"minute": 00
+				"minute": 0
 			}
 		},
 		{
@@ -77,43 +77,125 @@ if (localStorage["todoItems"] != null) {
 			"routine": {
 				"type": "daily",
 				"hour": 22,
-				"minute": 00
+				"minute": 0
 			}
 		},
 		{
 			"id": 3,
 			"name": "Custom Deliveries",
-			"completedDate": "2022-12-05T08:00:00+00:00",
+			"completedDate": null,
 			"routine": {
 				"type": "weekly",
 				"weekday": 2,
 				"hour": 10,
-				"minute": 00
+				"minute": 0
 			}
 		},
 		{
 			"id": 4,
 			"name": "Retainer",
-			"completedDate": "2022-12-21T10:43:00+01:00",
+			"completedDate": null,
 			"routine": {
 				"type": "cooldown",
-				"minutes": 30
+				"minutes": "60"
 			}
 		},
 		{
 			"id": 5,
-			"name": "Skysteel Tools",
+			"name": "Doman Enclave",
 			"completedDate": null,
 			"routine": {
-				"type": "once"
+				"type": "weekly",
+				"weekday": "2",
+				"hour": "10",
+				"minute": "0"
 			}
 		},
 		{
 			"id": 6,
-			"name": "Maps",
+			"name": "Mini Cactpot",
 			"completedDate": null,
 			"routine": {
-				"type": "once"
+				"type": "daily",
+				"hour": "16",
+				"minute": "0"
+			}
+		},
+		{
+			"id": 7,
+			"name": "Jumbo Cactpot",
+			"completedDate": null,
+			"routine": {
+				"type": "weekly",
+				"weekday": "6",
+				"hour": "21",
+				"minute": "0"
+			}
+		},
+		{
+			"id": 8,
+			"name": "Wonderous Tails",
+			"completedDate": null,
+			"routine": {
+				"type": "weekly",
+				"weekday": "2",
+				"hour": "10",
+				"minute": "0"
+			}
+		},
+		{
+			"id": 9,
+			"name": "Faux Hollows",
+			"completedDate": null,
+			"routine": {
+				"type": "weekly",
+				"weekday": "2",
+				"hour": "10",
+				"minute": "0"
+			}
+		},
+		{
+			"id": 10,
+			"name": "Fashion Report",
+			"completedDate": null,
+			"routine": {
+				"type": "weekly",
+				"weekday": "5",
+				"hour": "16",
+				"minute": "0"
+			}
+		},
+		{
+			"id": 11,
+			"name": "Squadron Priority Mission",
+			"completedDate": null,
+			"routine": {
+				"type": "weekly",
+				"weekday": "2",
+				"hour": "10",
+				"minute": "0"
+			}
+		},
+		{
+			"id": 12,
+			"name": "Island Sanctuary",
+			"completedDate": null,
+			"routine": {
+				"type": "weekly",
+				"weekday": "5",
+				"hour": "10",
+				"minute": "0"
+			}
+		},
+		{
+			"id": 13,
+			"name": "Levequests",
+			"completedDate": null,
+			"routine": {
+				"type": "weekly",
+				"weekday": "5",
+				"hour": "16",
+				"minute": "0"
 			}
 		}
 	]
