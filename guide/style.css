@@ -73,3 +73,12 @@ code {
 img {
     max-width: 100%;
 }
+
+.explanation-note {
+    font-weight: 600;
+    color: springgreen;
+}
+
+.explanation-note {
+    color: #666;
+}
